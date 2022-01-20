@@ -82,7 +82,9 @@ body {
 }
 
 .nav__link {
+  border: 4px pink;
   color: #ebebeb;
+  background-color: #232323;
   font-size: 1.5rem;
   text-decoration: none;
   text-transform: uppercase;
@@ -386,9 +388,9 @@ body {
 }
 
 .about__img {
-  width: 50%;
+  width: 100%;
   max-width: 25rem;
-  height: 25rem;
+  height: 50vh;
   border-radius: 50%;
   border: 0.2rem solid #328ca8;
   background-image: url("img/Profile-picture-en-costume.png");
@@ -398,6 +400,20 @@ body {
 .about__desc {
   width: 50%;
   font-size: 1.25rem;
+  text-align: justify;
+
+  @media (max-width: 1300px) {
+    width: 100%;
+    text-align: justify;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    width: 55%;
+  }
 }
 
 .about__underline {
@@ -406,6 +422,7 @@ body {
 
 .about__cta {
   font-size: 1.5rem;
+  text-align: center;
 }
 
 .social__container {
