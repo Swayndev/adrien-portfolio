@@ -1,4 +1,19 @@
-:root {
+/* Navigation */
+/* Header */
+/* Common to all sections */
+/* Section Process */
+/* Section Skills */
+/* Section Portfolio */
+/* Section About */
+/* Section Social */
+/* .social {
+	background-color: #232323;
+	padding: 2rem 15% 6rem 15%;
+} */
+/* svg icons for social networks */
+/* Section Contact */
+/* Footer */
+&:root {
     --background-1: #A86C2F;
     --background-2: #FFBD7A;
     --background-3: #F5A95D;
@@ -7,13 +22,26 @@
     --main-text: #232323;
 }
 
-*,
-*:before,
-*:after {
+* {
     box-sizing: border-box;
+
+    &:before {
+        box-sizing: border-box;
+    }
+
+    &:after {
+        box-sizing: border-box;
+    }
 }
 
-html,
+html {
+    color: #444444;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 1.3rem;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     color: #444444;
     font-family: 'Alegreya Sans', sans-serif;
@@ -22,17 +50,13 @@ body {
     padding: 0;
 }
 
-
-/* Navigation */
 .nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
     position: fixed;
-
     width: 100%;
     height: 4rem;
-
     background-color: #232323;
     top: 0;
     left: 0;
@@ -40,63 +64,51 @@ body {
     z-index: 2;
 }
 
-.nav__logo svg {
-    fill: #ffffff;
-    height: 3rem;
-
-    margin-left: 0rem;
-    margin-right: 0rem;
-
-    border: 2px white;
-
-    z-index: 2;
+.nav__logo {
+    svg {
+        fill: #ffffff;
+        height: 3rem;
+        margin-left: 0rem;
+        margin-right: 0rem;
+        border: 2px white;
+        z-index: 2;
+    }
 }
 
 .nav__container {
     display: flex;
-
     list-style-type: none;
     margin: 1em;
     padding: 0;
-
 }
 
 .nav__link {
     border: 4px pink;
     color: #ebebeb;
     background-color: #232323;
-
     font-size: 1.5rem;
     text-decoration: none;
     text-transform: uppercase;
-
     width: 20%;
     padding: 1.25rem;
 
+    &:hover {
+        color: #232323;
+        background-color: #328CA8;
+    }
 }
 
-.nav__link:hover {
-    color: #232323;
-    background-color: #328CA8;
-}
-
-/* Header */
 .header {
-
     height: 90vh;
     max-height: fit-content;
-
     color: white;
     background-image: url('../img/iran-g8dc23ab5d_1920.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-
     text-align: center;
-
     margin-top: 4rem;
     padding-top: 10rem;
-
     border: 2px solid black;
 }
 
@@ -115,17 +127,14 @@ body {
 
 .header__link {
     color: #328CA8;
-
     font-weight: bold;
     text-decoration: none;
+
+    &:hover {
+        opacity: 0.7;
+    }
 }
 
-.header__link:hover {
-    opacity: 0.7;
-}
-
-
-/* Common to all sections */
 .heading {
     font-size: 3rem;
     text-align: center;
@@ -142,13 +151,12 @@ body {
     text-decoration: none;
     margin: 0 auto;
     padding: 0.5rem 3rem;
+
+    &:hover {
+        box-shadow: 2px 2px 8px 0px rgba(68, 68, 68, 0.75);
+    }
 }
 
-.button:hover {
-    box-shadow: 2px 2px 8px 0px rgba(68, 68, 68, 0.75);
-}
-
-/* Section Process */
 .process {
     height: auto;
     background-color: #ebebeb;
@@ -166,61 +174,48 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-
     color: #ffffff;
     font-size: 1.25rem;
     background-color: #232323;
     padding: 6rem 15% 3rem 15%;
-
 }
 
 .process__item {
     border: 0.2rem solid #A86C2F;
     border-radius: 30px;
-
     width: 70%;
     position: relative;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     margin-top: 0.75rem;
     margin-bottom: 0.75rem;
     padding: 2.5rem;
-
-    text-align: center;
-}
-
-.process__item p {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
     text-align: center;
 
-    padding: 0.7rem;
+    p {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        text-align: center;
+        padding: 0.7rem;
+    }
 }
 
 .process__circle {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-
     position: absolute;
-
     width: 12rem;
     height: 12rem;
-
     margin: 1rem;
     padding: 1rem;
-
     left: -18rem;
-
     border-radius: 100%;
 }
 
 .c1 {
-
     background-image: url("../img/discover-img.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -228,9 +223,7 @@ body {
 }
 
 .c2 {
-
     background-image: url("../img/design-img.webp");
-
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 1;
@@ -238,7 +231,6 @@ body {
 
 .c3 {
     background-image: url("../img/deploy-img.webp");
-
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 1;
@@ -246,11 +238,8 @@ body {
 
 .c4 {
     background-image: url("../img/Be-ready-img.webp");
-
     background-size: cover;
     background-repeat: no-repeat;
-
-
     z-index: 1;
 }
 
@@ -260,15 +249,13 @@ body {
     font-weight: 600;
 }
 
-/* Section Skills */
 .skills {
     padding: 4rem 15% 8rem 15%;
-}
 
-.skills .heading {
-    text-align: center;
-    color: #328CA8;
-
+    .heading {
+        text-align: center;
+        color: #328CA8;
+    }
 }
 
 .skill__item {
@@ -284,10 +271,8 @@ body {
     background-color: #232323;
     text-align: center;
     padding: 0.75rem;
-
     border-radius: 0.5rem;
     box-shadow: 0.8rem 0.3rem 0.3rem#232323;
-
 }
 
 .skill__progress-bar {
@@ -296,7 +281,6 @@ body {
     padding: 0.75rem;
     text-align: right;
     position: relative;
-
     border: 0.1rem solid #232323;
     border-radius: 0.5rem;
     box-shadow: 0.8rem 0.3rem 0.3rem#328CA8;
@@ -322,21 +306,24 @@ body {
     width: 80%;
 }
 
-/* Section Portfolio */
 .portfolio {
     background-color: #328CA8;
     padding: 2rem 15% 6rem 15%;
-}
 
-.portfolio .heading {
-    color: #ffffff;
+    .heading {
+        color: #ffffff;
+    }
+
+    .button {
+        display: block;
+        width: 80%;
+    }
 }
 
 .portfolio__containter {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
 }
 
 .portfolio__item {
@@ -345,18 +332,18 @@ body {
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
     padding: 0.5rem;
-
     border-radius: 20px;
-}
 
-.portfolio__item:hover {
-    box-shadow: 2px 2px 20px 0px rgba(68, 68, 68, 1);
-}
+    &:hover {
+        box-shadow: 2px 2px 20px 0px rgba(68, 68, 68, 1);
+    }
 
-
-.portfolio__item .button:hover {
-    box-shadow: 2px 2px 8px 0px rgba(68, 68, 68, 0.75);
-    opacity: 0.8;
+    .button {
+        &:hover {
+            box-shadow: 2px 2px 8px 0px rgba(68, 68, 68, 0.75);
+            opacity: 0.8;
+        }
+    }
 }
 
 .portfolio__img {
@@ -364,7 +351,6 @@ body {
     height: 10rem;
     margin-bottom: 0.5rem;
     object-fit: cover;
-
     border-radius: 10px;
 }
 
@@ -373,7 +359,6 @@ body {
     background-color: #ebebeb;
     text-align: center;
     padding: 1rem;
-
     border-radius: 10px;
 }
 
@@ -385,31 +370,23 @@ body {
     margin-bottom: 0;
 }
 
-.portfolio .button {
-    display: block;
-    width: 80%;
-}
-
-/* Section About */
 .about {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     background-color: #ebebeb;
     padding: 2rem 15% 6rem 15%;
-}
 
-.about .heading {
-    width: 100%;
-    color: #232323;
+    .heading {
+        width: 100%;
+        color: #232323;
+    }
 }
 
 .about__img {
-
     width: 50%;
     max-width: 25rem;
     height: 25rem;
-
     border-radius: 50%;
     border: 0.2rem solid #328CA8;
     background-image: url("img/Profile-picture-en-costume.png");
@@ -429,14 +406,6 @@ body {
     font-size: 1.5rem;
 }
 
-/* Section Social */
-
-/* .social {
-	background-color: #232323;
-	padding: 2rem 15% 6rem 15%;
-} */
-
-
 .social__container {
     display: flex;
     justify-content: center;
@@ -446,25 +415,23 @@ body {
 
 .social__link {
     margin: 0 6rem;
+
+    &:hover {
+        svg {
+            path {
+                opacity: 0.75;
+            }
+        }
+    }
 }
 
-/* svg icons for social networks */
-
-
-
-
-.social__link:hover svg path {
-    opacity: 0.75;
-}
-
-/* Section Contact */
 .contact {
     background-color: #328CA8;
     padding: 2rem 15% 6rem 15%;
-}
 
-.contact .heading {
-    color: #ffffff;
+    .heading {
+        color: #ffffff;
+    }
 }
 
 .form {
@@ -485,10 +452,10 @@ body {
     margin-bottom: 2rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-}
 
-.form__input::placeholder {
-    color: #ebebeb;
+    &::placeholder {
+        color: #ebebeb;
+    }
 }
 
 .form__label {
@@ -520,54 +487,54 @@ body {
     margin-bottom: 4rem;
     padding: 0.75rem;
     cursor: pointer;
+
+    &:hover {
+        box-shadow: 2px 2px 8px 0px rgba(68, 68, 68, 0.75);
+    }
 }
 
-.form__button:hover {
-    box-shadow: 2px 2px 8px 0px rgba(68, 68, 68, 0.75);
-}
-
-
-/* Footer */
 .footer {
     background-color: #ebebeb;
     padding: 1rem;
-
     height: 40vh;
 
-}
+    .heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        color: #232323;
+        font-size: 3rem;
+        font-weight: 600;
+    }
 
-.footer .heading {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    color: #232323;
-    font-size: 3rem;
-    font-weight: 600;
+    .social__link {
+        margin: 0 2rem;
+
+        svg {
+            display: block;
+            width: 3rem;
+            height: 3rem;
+
+            path {
+                fill: #444444;
+                opacity: 0.50;
+            }
+        }
+
+        &:hover {
+            svg {
+                path {
+                    opacity: 0.80;
+                }
+            }
+        }
+    }
 }
 
 .footer__line {
     width: 25%;
     height: 0.5rem;
     background-color: #6ED5F5;
-}
-
-.footer .social__link {
-    margin: 0 2rem;
-}
-
-.footer .social__link svg {
-    display: block;
-    width: 3rem;
-    height: 3rem;
-}
-
-.footer .social__link svg path {
-    fill: #444444;
-    opacity: 0.50;
-}
-
-.footer .social__link:hover svg path {
-    opacity: 0.80;
 }
 
 .footer__copy {
